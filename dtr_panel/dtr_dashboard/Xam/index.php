@@ -24,29 +24,34 @@ if (isset($Login)) {
 <html>
 
 <head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <style>
-        /* Custom CSS styles */
-        body {
-            padding-right: 0px;
-            margin-right: 0%;
+      body {
+        display: -ms-flexbox;
+        display: flex;
+        margin:9%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 950px;
+
         }
 
         
 
        .logo-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: left;
+            align-items: left;
         }
 /*
         .logo-container img {
             max-height: 357px;
             max-width: 500px;
         } */
-
         .card-header {
             background-color: #fff;
             color: grey;
@@ -66,23 +71,35 @@ if (isset($Login)) {
             background-color: #343a40;
             color: #fff;
         }
-
         .form-control {
             height: 40px;
             border-radius: 4px;
         }
 
-        .login_btn {
-            color: #fff;
-            background-color: #d6a92b;
-            border: none;
-            transition: all 0.2s;
-            width: 220px;
-        }
+        .btn {
+      background-color: #d6a92b; /* Green */
+      border: none;
+      color: white;
+      padding: 8px 90px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
 
-        .login_btn:hover {
-            background-color: #c79528;
-        }
+    .btn{
+      background-color: white; 
+      color: black; 
+      border: 2px solid #d6a92b;
+    }
+
+    .btn:hover {
+      background-color: #d6a92b;
+      color: white;
+    }
 
         .card-footer {
             background-color: #fff;
@@ -98,15 +115,18 @@ if (isset($Login)) {
             color: #333;
             text-decoration: none;
         }
-
-
         .content-centered {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* height: 100vh; */
+        border-radius: 0px;
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+         height: 100%;
+         width:80%;
+         padding: 0.1px;
+         
     }
-    </style>
+   </style>
 </head>
 
 <body>
@@ -117,12 +137,7 @@ if (isset($Login)) {
     <nav class="navbar navbar-expand-lg navbar-dark static-top">
         <div class="container">
         <!-- <div class="col-md-8"> -->
-            <a class="navbar-brand" href="http://dbcegoa.ac.in">
-                <h3 style="font-family:'PT Serif';"><span class="mh3">DBCE</span><br /></h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+         
             <div class="collapse navbar-collapse mnav" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -139,55 +154,39 @@ if (isset($Login)) {
     </nav>
 
 <!-- ---LOGOOOOO--------- -->
-
-    <div class="container content-centered">
+<div class="container content-centered">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-7">
                 <div class="logo-container">
-                    <img src="logo.jpg" alt="Logo" height="357" width="500">
+                    <img src="logo.jpg" alt="Logo" height="300" width="480">
                 </div>
             </div>
-    <div class="col-md-6">
-    <!-- <div class="container"> -->
-        <div class="d-flex justify-content-center h-100">
-            <div class="card mcon" id="card">
-                <div class="card-header" id="card-header">
-                    <h3 align="center" style="color:gray; font-family:times; font-size:16px">LOGIN HERE</h3>
-                </div>
-                <div class="card-body">
-                    <form action="" method="post">
-                        <p align='center'><b><?php echo @$err; ?></b></p>
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <!-- <span class="input-group-text"><i class="fas fa-user"></i></span> -->
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header text-center">LOGIN HERE</div>
+                    <div class="card-body">
+                        <form method="post" name="login_sform">
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" id="rno" name="rno" alt="rno" type="text" placeholder="Roll Number" autocomplete="off">
                             </div>
-                            <input type="text" autocapitalize="characters" autocomplete="off" class="form-control a" name="rno" placeholder="Roll Number">
-                        </div>
-
-                        <div class="input-group form-group">
-                            <div class="input-group-prepend">
-                                <!-- <span class="input-group-text"><i class="fas fa-key"></i></span> -->
+                            <div class="form-group">
+                                <input class="form-control form-control-lg" id="password" name="Password" type="password" alt="password" placeholder="Password" autocomplete="off">
                             </div>
-                            <input type="password" class="form-control" name="Password" placeholder="Password">
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <input type="submit" value="Login"  name="Login" class="btn btn-primary login_btn">
-                                </div>
+                            <div class="form-group">
+                            <input type="submit" value="Login"  name="Login" class="btn">
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer" id="card-footer">
-                    <div class="d-flex justify-content-center">
-                        <a href="register.php" style="text-decoration:none; color:black;">New User.? Register Here</a>
-                        
+                            <div class="card-footer">
+                             <h6 style="color:gray;">New User?</h6>
+                            <a href="register.php" <b style=" text-decoration:underline; color:black;" > Register Here </b></a>
+                            </div>
+                           
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+                      
 
 </body>
 

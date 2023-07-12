@@ -94,7 +94,7 @@ if (isset($Register)) {
 
         form {
             width: 100%;
-            max-width: 700px;
+            max-width: 680px;
             margin: 0 auto;
             padding: 15px;
             border: 1px solid #ddd;
@@ -138,7 +138,6 @@ if (isset($Register)) {
             display: inline;
             margin-right: 10px;
         }
-
         form input[type="submit"],
         form input[type="reset"] {
             background-color: #d6a92b;
@@ -162,6 +161,7 @@ if (isset($Register)) {
             margin-right: 10px;
             width: 150px;
         }
+
 
         .card {
             border: none;
@@ -296,14 +296,15 @@ if (isset($Register)) {
                 </div>
 
                 <div class="container content-centered">
-                    <input type="submit" name="Register" value="Submit" />
-                    <input type="reset" onClick="window.location.href=window.location.href" value="Reset" />
+                    <input type="submit" name="Register" value="Submit" id="btn" />
+                    <input type="reset" id="btn" onClick="window.location.href=window.location.href" value="Reset" />
                 </div>
             </form>
 
             <div class="card-footer">
                 <div class="d-flex justify-content-center">
-                    <a href="index.php">Have an Account? Login Here</a>
+                    <h5> Have an account? </h5>
+                  <b >  <a href="index.php">Login Here</a><b>
                 </div>
             </div>
 

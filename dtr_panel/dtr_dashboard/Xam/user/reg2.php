@@ -197,7 +197,7 @@ function calculateAmount() {
         amount = 525 + (totalCredits * 105);
     }
     var currentDate = new Date();
-            var lateFeeDate = new Date("2023-06-30"); // Set your late fee deadline date here
+            var lateFeeDate = new Date("2023-08-30"); // Set your late fee deadline date here
             if (currentDate > lateFeeDate) {
                 var daysDifference = Math.floor((currentDate - lateFeeDate) / (1000 * 60 * 60 * 24));
                 var lateFee = daysDifference * 100; // Set your late fee amount here

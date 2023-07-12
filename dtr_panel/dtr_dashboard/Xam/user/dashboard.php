@@ -39,7 +39,7 @@ if (!$rr) {
         }
 
         .navbar-brand {
-            /* font-family: 'Acme'; */
+         
             font-size: 30px;
             color: white;
             padding-right: 750px;
@@ -58,40 +58,16 @@ if (!$rr) {
             background-color: #343a40;
             overflow-x: hidden;
             overflow-y: auto;
+           
         }
+       
 
         .main {
             margin-left: 200px;
             padding: 20px;
         }
 
-        .dropdown-btn {
-            width: 100%;
-            padding: 8px 16px;
-            text-align: left;
-            border: none;
-            outline: none;
-            background-color: inherit;
-            font-family: inherit;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .dropdown-btn:hover {
-            background-color: #ddd;
-        }
-
-        .active {
-            background-color: #3c3c3c;
-            color: white;
-        }
-
-        .dropdown-container {
-            display: none;
-            padding-left: 8px;
-        }
-
+       
         .fa-caret-down {
             float: right;
             padding-right: 8px;
@@ -100,6 +76,7 @@ if (!$rr) {
         @media screen and (max-height: 450px) {
             .sidebar {
                 padding-top: 15px;
+             
             }
 
             .sidebar a {
@@ -115,12 +92,12 @@ if (!$rr) {
         <div class="container-fluid"style="background-color:#343a40;">
             <div class="navbar-header">
                 
-                <a class="navbar-brand text-black" style="font-size:30px;color: white;padding-right: 1000px;background-color:#343a40" href="#">Welcome, <?php echo '' . $row['fname'] . ' ' . $row['lname']; ?> </a>
+                <a class="navbar-brand text-black" style="font-size:20px;color: white;background-color:#343a40">Welcome, <?php echo '' . $row['fname'] . ' ' . $row['lname']; ?> </a>
 
             </div>
             <ul class="nav navbar-nav navbar-right collapsed text-black" id="navbar">
                 <li>
-                    <a class="mnav11" style="color:white;-size:25px;background-color:#343a40" href="../logout.php?logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout</a>
+                    <a class="mnav11" style="color:white;font-size:20px;background-color:#343a40" href="../logout.php?logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Logout</a>
                 </li>
             </ul>
     </nav>
@@ -128,13 +105,11 @@ if (!$rr) {
     <div class="wrapper">
         <div class="sidebar col -l2 -s4">
             <ul>
-                <div>
-                   
-                </div>
-                <li><a href="dashboard.php"style="color: #ffffff"><i class="fas fa-clipboard"></i>Dashboard</a></li><br>
-                <li><a href="dashboard.php?page=update_profile"style="color: #ffffff"><i class="fas fa-user-edit"></i> Update Profile</a></li><br>
-                <li><a href="dashboard.php?page=reg2"style="color: #ffffff"><i class="fas fa-pen"></i>Register For Exam</a></li><br>
-                <li><a href="dashboard.php?page=subjects_reg"style="color: #ffffff"><i class="far fa-file"></i> Registered Subjects</a></li><br>
+                
+                <li><a href="dashboard.php"style="color:white"><i class="fas fa-clipboard"></i>Dashboard</a></li><br>
+                <li><a href="dashboard.php?page=update_profile"style="color:white"><i class="fas fa-user-edit"></i> Update Profile</a></li><br>
+                <li><a href="dashboard.php?page=reg2"style="color:white"><i class="fas fa-pen"></i>Register For Exam</a></li><br>
+                <li><a href="dashboard.php?page=subjects_reg"style="color:white"><i class="far fa-file"></i> Registered Subjects</a></li><br>
             </ul>
         </div>
         <div class="col-sm-12 col-sm-offset-12 col-md-10 col-md-offset-2 main">
@@ -159,7 +134,7 @@ if (!$rr) {
                 }
                 
             } else {
-            ?><h2 style="font-family:'Bitter';margin-left: 2%;font-weight:600;"><?php echo @$exerrr; ?></h2>
+            ?><h2 style="margin-left: 2%;font-weight:600;"><?php echo @$exerrr; ?></h2>
 
                 <!-- container end-->
 
