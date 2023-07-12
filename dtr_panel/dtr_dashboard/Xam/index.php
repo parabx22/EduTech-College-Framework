@@ -33,11 +33,13 @@ if (isset($Login)) {
       body {
         display: -ms-flexbox;
         display: flex;
-        margin:9%;
+        justify-items: center;
+        align-items: center;
         padding-top: 40px;
         padding-bottom: 40px;
         width: 950px;
-
+        margin-left: 20%;
+        margin-top: 10%;
         }
 
         
@@ -56,7 +58,7 @@ if (isset($Login)) {
             background-color: #fff;
             color: grey;
             text-align: center;
-            font-size: 12px;
+            font-size: 15px;
             padding: 10px;
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
